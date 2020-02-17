@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <title>form</title>
+</head>
+<body>
+    <form method="POST">
+        <h1>Form</h1>
+        <div>
+            <label for="user">User</label>
+            <input type="text" id="user" name="user">
+        </div>
+        <div>
+            <label for="pass">Password</label>
+            <input type="password" id="pass" name="password">
+        </div>
+        <div>
+            <p>Gender</p>
+            <input type="radio" id="male"  name="gender" value="male">
+            <label class="label-radio" for="male">Male</label>
+            <input type="radio" id="female"  name="gender" value="female">
+            <label class="label-radio" for="female">Female</label>
+        </div>
+        <div class="btn-box">
+            <button id="ok">OK</button>
+            <button id="cancel">Cancel</button>
+        </div>
+    </form>
+</body>
+</html>

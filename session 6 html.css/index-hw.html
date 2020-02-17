@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style-hw.css" rel="stylesheet" type="text/css">
+    <title>Document</title>
+</head>
+<body id="body">
+    <div class="section">
+        <a id="demo-a" href="https://www.google.com.vn/">Google</a>
+        <button id="btn-demo">Click here to get the attribute's value</button>
+        <input id="demo-input" type="text">
+        <script src="script-hw.js"></script>
+    </div>
+    <div class="section">
+        <select id="select-menu">
+            <option>Com</option>
+            <option>Canh</option>
+            <option>Ca</option>
+            <option>Cua</option>
+        </select>
+        <button id="btn-remove">Remove</button>
+    </div>
+    <div>
+        <table style="margin-bottom: 20px;" id="table">
+            <tr>
+                <td>Row1 Cell1</td>
+                <td>Row1 Cell2</td>
+            </tr>
+            <tr>
+                <td>Row2 Cell1</td>
+                <td>Row2 Cell2</td>
+            </tr>
+            <tr>
+                <td>Row3 Cell1</td>
+                <td>Row3 Cell2</td>
+            </tr>
+        </table>
+        <div class="input">
+            <label for="row">Row</label>
+            <input id="row" name="row" value="0" type="number">
+        </div>
+        <div class="input">
+            <label for="col">Column</label>
+            <input id="col" name="col" value="0" type="number">
+        </div>
+        <div class="input">
+            <label for="content">Content</label>
+            <input id="content" name="content" type="text">
+        </div>
+        <!-- <input type="submit" id="btn-tabel" value="Edit"> -->
+        <button id="btn-tabel">Edit</button>
+    </div>
+</body>
+<style>
+    .section{
+        padding-bottom: 30px;
+         margin-bottom: 30px;
+          border-bottom: 1px solid;
+    }
+    .input{
+        margin-bottom: 5px;
+    }
+    table, tr, td{
+        border: 1px solid;
+    }
+    td{
+        height: 20px;
+    }
+</style>
+</html>

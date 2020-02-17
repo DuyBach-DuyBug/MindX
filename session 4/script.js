@@ -56,6 +56,6 @@ switch (user_prompt) {
         alert('UI means User Interface, UX mean User Experience, are the process to define how your products looks and feels');
         break;    
     default:
-        alert('');
+        alert('We could not find your word');
         break;
 }
