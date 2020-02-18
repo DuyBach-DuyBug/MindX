@@ -22,24 +22,30 @@ document.addEventListener('DOMContentLoaded',(event)=>{
     editTable = () =>{
         let edit = document.getElementById('btn-tabel');
             edit.addEventListener('click', () => {
-                let table = document.getElementById('table');
+                let table_rows = document.getElementById('table').rows;
                 let row = document.getElementById('row').value;
                 let column = document.getElementById('col').value;
                 let content = document.getElementById('content').value;
-                console.dir(table)
-                let last_row = table.rows.length
+
                 if(row > 0){
-                    let new_row = table.insertRow(last_row)
-                    for(let i =0; i < table.rows[last_row - 1 ].cells.length; i++){
-                        new_row.insertCell(i)
+                    for(let a =0; a < row; a++){
+                        let last_row = document.getElementById('table').rows.length
+                        let new_row = document.getElementById('table').insertRow(last_row)
+                        for(let i =0; i < table_rows[last_row - 1].cells.length; i++){
+                            let new_content = new_row.insertCell(i)
+                            new_content.innerHTML = content
+                        }
                     }
-                    // let new_col = table.insertCell(column)
-                    // console.dir(table.rows[0])
-                    // console.dir(table.rows[0].cells = 4)
                 }
+
                 if(column > 0){
-                    for(let i=0; i < last_row; i++){
-                        
+                    for(let a = 0; a < column; a++){
+                        let last_row = document.getElementById('table').rows.length
+                        for(let i=0; i < last_row; i++){
+                            let last_cell = table_rows[i].cells.length
+                            let new_content = table_rows[i].insertCell(last_cell)
+                            new_content.innerHTML = content
+                        }
                     }
                 }
             })

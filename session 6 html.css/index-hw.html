@@ -39,11 +39,11 @@
         </table>
         <div class="input">
             <label for="row">Row</label>
-            <input id="row" name="row" value="0" type="number">
+            <input id="row" name="row" value="0" type="number" min="0">
         </div>
         <div class="input">
             <label for="col">Column</label>
-            <input id="col" name="col" value="0" type="number">
+            <input id="col" name="col" value="0" type="number" min="0">
         </div>
         <div class="input">
             <label for="content">Content</label>
@@ -67,6 +67,7 @@
     }
     td{
         height: 20px;
+        min-width: 81px;
     }
 </style>
 </html>
