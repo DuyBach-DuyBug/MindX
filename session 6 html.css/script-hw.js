@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded',(event)=>{
         let menu = document.getElementById('select-menu');
         let btn_remove = document.getElementById('btn-remove');
         btn_remove.addEventListener('click', () => {
-            menu.remove(menu.selectIndex)
+            menu.remove(menu.selectedIndex)
         })
     }
     removeMenu();
