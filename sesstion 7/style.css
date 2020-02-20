@@ -1,0 +1,51 @@
+body{
+    font-family: cursive;
+    font-size: 15px;
+}
+h2{
+    text-align: center;
+}
+#info{
+    max-width: 1200px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    border: 1px solid;
+    border-top: none;
+}
+.row-title{
+    border-top: 1px solid;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.row > div{
+    width: 20%;
+    padding: 8px 0;
+    text-align: center;
+    transition-duration: .3s;
+}
+.name{
+    cursor: pointer;
+}
+.name:hover{
+    background: whitesmoke;
+}
+.row > div.salary{
+    width: 0;
+    overflow: hidden;
+    transition-duration: 1s;
+}
+.row > div.salary.show{
+    width: 20%;
+}
+.data{
+    color: red;
+    display: flex;
+    text-align: left;
+    padding: 8px 0 8px 50px;
+    min-height: 20.8px;
+}
+#employee_name{
+    padding-right: 8px;
+}
