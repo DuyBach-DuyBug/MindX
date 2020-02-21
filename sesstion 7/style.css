@@ -40,9 +40,13 @@ h2{
     width: 20%;
 }
 .data{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.9);
+    min-width: 300px;
+    top: 10px;
     color: red;
     display: flex;
-    text-align: left;
+    text-align: center;
     padding: 8px 0 8px 50px;
     min-height: 20.8px;
 }
