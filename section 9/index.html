@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section id="counter">
+        <div class="section">
+            <button id="minus">-</button>
+            <span id="number">0</span>
+            <button id="plus">+</button>
+        </div>
+    </section>
+    <section id="timer">
+        <div class="section">
+            <input id="time-in">
+            <button id="start-time">Start</button>
+            <button id="stop-time">Stop</button>
+            <div id="time-countdown"></div>
+        </div>
+    </section>
+    <section id="random-quoter">
+        <div class="section">
+            <button id="reload-random">Reload</button>
+            <h1 id="quoteText"></h1>
+            <p id="quoteAuthor"></p>
+        </div>
+    </section>
+    <section id="timesheet">
+        <div class="section">
+            <input id="in-project" placeholder="Enter Project">
+            <input id="in-task" placeholder="Enter Task">
+            <input id="in-time-spent" placeholder="Enter Time Spent" type="number">
+            <button id="add">Add</button>
+            <button id="clear">Clear</button>
+            <table id="table">
+                <tr>
+                    <th>Project</th>
+                    <th>Task</th>
+                    <th>Time Spent</th>
+                    <th>Actions</th>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

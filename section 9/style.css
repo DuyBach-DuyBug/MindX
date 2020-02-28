@@ -1,0 +1,9 @@
+.section{
+    text-align: center;
+    margin: auto;
+    padding: 50px;
+    border: 1px solid;
+}
+#time-countdown{
+    min-height: 30px;
+}
