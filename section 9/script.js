@@ -83,11 +83,11 @@ const timesheet = () => {
     let array_length = timeSheetData.length
     for (let i = 0; i < array_length; i++) {
         show_table.innerHTML += `<tr>
-        <td class="id">${timeSheetData[i].Project}</td>
-        <td class="email">${timeSheetData[i].Task}</td>
-        <td>${timeSheetData[i].Time_Spent}</td>
-        <td><button id="remove-${i}" data-index="remove-${i}">X</button><button id="update-${i}" data-index="update-${i}">U</button></td>
-        </tr>`
+            <td class="id">${timeSheetData[i].Project}</td>
+            <td class="email">${timeSheetData[i].Task}</td>
+            <td>${timeSheetData[i].Time_Spent}</td>
+            <td><button id="remove-${i}" data-index="remove-${i}">X</button><button id="update-${i}" data-index="update-${i}">U</button></td>
+            </tr>`
     }
 
     let add = document.getElementById('add');
@@ -99,6 +99,7 @@ const timesheet = () => {
         name_project = document.getElementById('in-project').value;
         name_task = document.getElementById('in-task').value;
         name_timeSpent = Number(document.getElementById('in-time-spent').value);
+
         if (name_project && name_task && name_timeSpent) {
             let new_object = { "Project": name_project, "Task": name_task, "Time_Spent": name_timeSpent }
             new_ob_ar = timeSheetData.push(new_object)
@@ -109,6 +110,8 @@ const timesheet = () => {
             <td><button id="remove-${new_ob_ar - 1}" data-index="remove-${new_ob_ar - 1}">X</button><button id="update-${new_ob_ar - 1}" data-index="update-${new_ob_ar - 1}">U</button></td>
             </tr>`
         }
+        array_length = new_ob_ar
+        remove_btn();
     })
     // clear button 
     clear.addEventListener("click", () => {
@@ -117,12 +120,17 @@ const timesheet = () => {
         document.getElementById('in-time-spent').value = null
     })
     // remove button
-    let remove = document.getElementById('remove-');
-    for (let i = 0; i < new_ob_ar; i++) {
-        remove[i].addEventListener("click", () => {
-            console.log(i)
-        })
+    function remove_btn() {
+        for (let i = 0; i < array_length; i++) {
+            let remove = document.getElementById('remove-' + i);
+            remove.addEventListener("click", () => {
+                debugger
+                delete timeSheetData[i]
+                console.dir(timeSheetData)
+            })
+        }
     }
+    remove_btn();
     console.dir(timeSheetData)
 }
 timesheet();
@@ -165,7 +173,7 @@ const Freaking_math = () => {
     let ops = ['+', '-'];
     let random_boolean = ['true', 'false'];
     let wrong = [-1, -2, 1, 2];
-    function random_math(){
+    function random_math() {
         random_a = Math.floor(Math.random() * 9) + 1;
         random_b = Math.floor(Math.random() * 9) + 1;
         random_z = ops[Math.floor(Math.random() * ops.length)]
@@ -184,11 +192,16 @@ const Freaking_math = () => {
         }
     }
     random_math();
+    let audio_true = document.getElementById('audio-true');
+    let audio_false = document.getElementById('audio-false');
+
     document.getElementById('true-math').addEventListener('click', () => {
         if (random_y == 'true') {
             point += 1;
-        }else{
+            audio_true.play();
+        } else {
             point = 0;
+            audio_false.play();
         }
         random_math()
         document.getElementById('point-math').innerHTML = point;
@@ -198,8 +211,10 @@ const Freaking_math = () => {
     document.getElementById('false-math').addEventListener('click', () => {
         if (random_y == 'false') {
             point += 1;
-        }else{
+            audio_true.play();
+        } else {
             point = 0;
+            audio_false.play();
         }
         random_math()
         document.getElementById('point-math').innerHTML = point;
