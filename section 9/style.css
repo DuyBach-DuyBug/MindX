@@ -3,7 +3,77 @@
     margin: auto;
     padding: 50px;
     border: 1px solid;
+    position: relative;
+}
+.section h1{
+    padding: 0;
+    margin: 0;
+    padding-bottom: 15px;
 }
 #time-countdown{
     min-height: 30px;
+}
+.col-50{
+    width: 50%;
+}
+table{
+    width: 100%;
+}
+.setting-math{
+    position: absolute;
+    right: 30px;
+    text-align: left;
+    border: 1px solid;  
+    padding: 10px 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.setting-math h4{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.box-math{
+    border: 1px solid gray;
+    min-height: 300px; 
+    max-width: 300px;
+    margin: auto;
+    position: relative;
+}
+.btn{
+    position: absolute;
+    margin: auto;
+    bottom: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+#question-math{
+    margin: auto;
+    position: absolute;
+    width: 100%;
+    top: 83px;
+    font-size: 33px;
+}
+#point-math{
+    display: block;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 26px;
+    color: red;
+}
+#time-math {
+    height: 5px;
+    position: absolute;
+    top: 5px;
+    margin: auto;
+    left: 5%;
+    background: red;
+    transition-duration: 3s;
+    width: 90%;
+}
+.btn input{
+    padding: 15px;
 }

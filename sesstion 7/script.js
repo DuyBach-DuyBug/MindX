@@ -1,17 +1,17 @@
-let jsonAPI={}
+let jsonAPI = {}
 let table = document.getElementById('info');
 let data;
-const getData = async () =>{
+const getData = async () => {
     let api = await fetch('http://dummy.restapiexample.com/api/v1/employees');
     jsonAPI = await api.json()
 }
-const useData = async () =>{
+const useData = async () => {
     await getData();
     data = jsonAPI.data;
     let data_length = data.length;
     let i;
-    for(i=0; i< data_length; i++){
-        let {id, employee_name , employee_salary, employee_age, profile_image } = data[i]
+    for (i = 0; i < data_length; i++) {
+        let { id, employee_name, employee_salary, employee_age, profile_image } = data[i]
         table.innerHTML += `
         <div class="row">
         <div>${id}</div>
@@ -22,14 +22,14 @@ const useData = async () =>{
         </div>`
     }
 }
-const showData = async () =>{
+const showData = async () => {
     await useData();
     let name = document.getElementsByClassName('name');
     let name_length = name.length;
     let salary = document.getElementsByClassName('salary');
     let salary_id = document.getElementById('employee_salary');
     let name_id = document.getElementById('employee_name');
-    for(let i = 0; i < name_length; i++){
+    for (let i = 0; i < name_length; i++) {
         name[i].addEventListener('mouseover', () => {
             salary[i].classList.add('show')
             name_id.innerHTML = data[i].employee_name
@@ -43,3 +43,10 @@ const showData = async () =>{
     }
 }
 showData();
+const bach = async () => {
+    xhttp.open("POST", "http://dummy.restapiexample.com/api/v1/employees", true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send("fname=Henry&lname=Ford");
+
+}
+bach()

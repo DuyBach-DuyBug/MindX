@@ -1,36 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Document</title>
 </head>
+
 <body>
+    <!-- counter -->
     <section id="counter">
         <div class="section">
+            <h1>Counter</h1>
             <button id="minus">-</button>
             <span id="number">0</span>
             <button id="plus">+</button>
         </div>
     </section>
+    <!-- timer -->
     <section id="timer">
         <div class="section">
+            <h1>Timer</h1>
             <input id="time-in">
             <button id="start-time">Start</button>
             <button id="stop-time">Stop</button>
             <div id="time-countdown"></div>
         </div>
     </section>
+    <!-- random quoter -->
     <section id="random-quoter">
         <div class="section">
+            <h1>Random quote</h1>
             <button id="reload-random">Reload</button>
-            <h1 id="quoteText"></h1>
+            <h2 id="quoteText"></h2>
             <p id="quoteAuthor"></p>
         </div>
     </section>
+    <!-- timesheet -->
     <section id="timesheet">
         <div class="section">
+            <h1>Timesheet</h1>
             <input id="in-project" placeholder="Enter Project">
             <input id="in-task" placeholder="Enter Task">
             <input id="in-time-spent" placeholder="Enter Time Spent" type="number">
@@ -46,6 +56,34 @@
             </table>
         </div>
     </section>
+    <!-- Freaking math -->
+    <section id="freaking-math">
+        <div class="section">
+            <h1>Freaking Math</h1>
+            <div class="setting-math">
+                <h4>Settings</h4>
+                <div class="col-50">
+                    <label for="check-score">Score</label>
+                    <input type="checkbox" id="check-score" checked>
+                </div>
+                <div class="col-50">
+                    <label for="check-timer">Timer</label>
+                    <input type="checkbox" id="check-timer">
+                </div>
+            </div>
+            <div class="box-math">
+                <div id="time-math"></div>
+                <div id="point-math">0</div>
+                <p id="question-math"></p>
+                <div class="btn">
+                    <input type="button" value="X" id="false-math">
+                    <input type="button" value="V" id="true-math">
+                </div>
+            </div>
+        </div>
+    </section>
+
     <script src="script.js"></script>
 </body>
+
 </html>
